@@ -1,0 +1,3 @@
+ninja_dyndep_version = 1
+build obj/compat_CLI11/mcpp_generated/cli11_anchor.o: dyndep
+  restat = 1

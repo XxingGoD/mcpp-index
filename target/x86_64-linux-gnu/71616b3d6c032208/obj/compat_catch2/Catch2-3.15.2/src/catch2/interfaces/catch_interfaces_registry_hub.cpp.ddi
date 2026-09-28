@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "obj/compat_catch2/Catch2-3.15.2/src/catch2/interfaces/catch_interfaces_registry_hub.o"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "obj/compat_CLI11/mcpp_generated/cli11_anchor.o"
+    }
+  ],
+  "version": 1
+}

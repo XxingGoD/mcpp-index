@@ -1,0 +1,319 @@
+{
+  "graph": {
+    "packages": [
+      {
+        "package": {
+          "canonical": "mcpplibs.workspace@0.0.0",
+          "name": "workspace",
+          "namespace": "mcpplibs",
+          "source": "path+/tmp/claude-1000/idx",
+          "version": "0.0.0"
+        },
+        "requested_by": [],
+        "root": true
+      },
+      {
+        "package": {
+          "canonical": "mcpplibs.catch2-tests@0.1.0",
+          "name": "catch2-tests",
+          "namespace": "mcpplibs",
+          "source": "path+/tmp/claude-1000/idx/tests/examples/catch2",
+          "version": "0.1.0"
+        },
+        "requested_by": [
+          {
+            "key": "catch2-tests",
+            "requester": "mcpplibs.workspace@0.0.0",
+            "table": "workspace"
+          }
+        ],
+        "root": false
+      },
+      {
+        "link": {
+          "form": "static",
+          "reason": "default"
+        },
+        "package": {
+          "canonical": "compat.catch2@3.15.2",
+          "name": "catch2",
+          "namespace": "compat",
+          "source": "index+compat@3.15.2",
+          "version": "3.15.2"
+        },
+        "requested_by": [
+          {
+            "key": "compat.catch2",
+            "requester": "mcpplibs.catch2-tests@0.1.0",
+            "table": "[dependencies]"
+          }
+        ],
+        "root": false
+      }
+    ]
+  },
+  "runtime": {
+    "artifacts": [],
+    "binding": {
+      "arch": "x86_64",
+      "capabilities": [],
+      "contract_hash": "d69aa2690ce71fea",
+      "declared": true,
+      "environment": [
+        {
+          "op": "prepend",
+          "value": "${subosdir}/share",
+          "var": "XDG_DATA_DIRS"
+        },
+        {
+          "op": "prepend",
+          "value": "${subosdir}/usr/lib/dri",
+          "var": "LIBGL_DRIVERS_PATH"
+        },
+        {
+          "op": "prepend",
+          "value": "${subosdir}/share/glvnd/egl_vendor.d",
+          "var": "__EGL_VENDOR_LIBRARY_DIRS"
+        },
+        {
+          "op": "prepend",
+          "value": "${subosdir}/share",
+          "var": "XDG_DATA_DIRS"
+        },
+        {
+          "op": "prepend",
+          "value": "${subosdir}/usr/lib/gbm",
+          "var": "GBM_BACKENDS_PATH"
+        },
+        {
+          "op": "prepend",
+          "value": "${subosdir}/share/glvnd/egl_vendor.d",
+          "var": "__EGL_VENDOR_LIBRARY_DIRS"
+        },
+        {
+          "op": "prepend",
+          "value": "${subosdir}/share",
+          "var": "XDG_DATA_DIRS"
+        },
+        {
+          "op": "prepend",
+          "value": "${subosdir}/share",
+          "var": "XDG_DATA_DIRS"
+        }
+      ],
+      "host_libc": "2.39",
+      "libc": "glibc@2.44",
+      "library_dirs": [
+        "/home/speak/.mcpp/registry/data/xpkgs/xim-x-glibc/2.44/lib"
+      ],
+      "loader": "/home/speak/.mcpp/registry/data/xpkgs/xim-x-glibc/2.44/lib/ld-linux-x86-64.so.2",
+      "note": "",
+      "platform": "linux",
+      "provenance": "mcpp_default",
+      "provider_bindings": [
+        "mesa-lavapipe@26.2.1",
+        "mesa@25.0.7.2",
+        "nvidia-gl-host-link@0.1.2",
+        "vulkan-validation-layers@1.4.357.0"
+      ],
+      "provider_id": "xlings",
+      "runtime_artifacts": [],
+      "runtime_id": "glibc@2.44",
+      "runtime_providers": [],
+      "schema": 1,
+      "search_dirs": [
+        "/home/speak/.mcpp/registry/subos/default/lib"
+      ],
+      "selection": {
+        "mode": "mcpp_default",
+        "name": "default",
+        "owner_root": "/tmp/claude-1000/idx",
+        "source": "default_policy"
+      },
+      "subos_dir": "/home/speak/.mcpp/registry/subos/default"
+    },
+    "capabilities": [],
+    "crt_set": {
+      "kind": "",
+      "rule": "not-applicable",
+      "version": ""
+    },
+    "cxx_runtime_by_role": {
+      "distributable": "self-contained",
+      "intermediate": "self-contained",
+      "shared-library": "toolchain-coupled",
+      "test": "self-contained"
+    },
+    "dlopen_libs": [],
+    "dlopen_surface": {
+      "findings": [],
+      "members": 0,
+      "reason": "no dependency published a runtime library directory; there is no dlopen surface to judge",
+      "walked": 0
+    },
+    "library_dirs": [
+      "/home/speak/.mcpp/registry/data/xpkgs/xim-x-llvm/22.1.8/lib/x86_64-unknown-linux-gnu",
+      "/home/speak/.mcpp/registry/data/xpkgs/xim-x-llvm/22.1.8/lib",
+      "/home/speak/.mcpp/registry/data/xpkgs/xim-x-gcc-runtime/15.1.0/lib64"
+    ],
+    "link_intent": {
+      "deploy": [],
+      "deploy_files": [],
+      "frameworks": [],
+      "libraries": [],
+      "link_library_dirs": [],
+      "runtime_search_dirs": [],
+      "transitive_needed_dirs": []
+    },
+    "loader_tags": [
+      {
+        "actual": "DT_RPATH",
+        "form": "executable",
+        "path": "bin/argparse-tests/parse",
+        "required": "DT_RPATH",
+        "status": "ok"
+      },
+      {
+        "actual": "DT_RPATH",
+        "form": "executable",
+        "path": "bin/build-mcpp-tests/answer",
+        "required": "DT_RPATH",
+        "status": "ok"
+      },
+      {
+        "actual": "DT_RPATH",
+        "form": "executable",
+        "path": "bin/catch2-tests/main",
+        "required": "DT_RPATH",
+        "status": "ok"
+      },
+      {
+        "actual": "DT_RPATH",
+        "form": "executable",
+        "path": "bin/cjson-tests/parse",
+        "required": "DT_RPATH",
+        "status": "ok"
+      },
+      {
+        "actual": "DT_RPATH",
+        "form": "executable",
+        "path": "bin/cli11-tests/parse",
+        "required": "DT_RPATH",
+        "status": "ok"
+      }
+    ],
+    "placement": [],
+    "placement_notes": [],
+    "providers": [],
+    "requirements": [],
+    "search": {
+      "closure": [
+        {
+          "machine_local": true,
+          "origin": "payload",
+          "path": "/home/speak/.mcpp/registry/data/xpkgs/xim-x-glibc/2.44/lib64"
+        },
+        {
+          "machine_local": true,
+          "origin": "payload",
+          "path": "/home/speak/.mcpp/registry/data/xpkgs/xim-x-llvm/22.1.8/lib/x86_64-unknown-linux-gnu"
+        },
+        {
+          "machine_local": true,
+          "origin": "payload",
+          "path": "/home/speak/.mcpp/registry/data/xpkgs/xim-x-llvm/22.1.8/lib"
+        },
+        {
+          "machine_local": true,
+          "origin": "payload",
+          "path": "/home/speak/.mcpp/registry/data/xpkgs/xim-x-gcc-runtime/15.1.0/lib64"
+        },
+        {
+          "machine_local": true,
+          "origin": "subos_farm",
+          "path": "/home/speak/.mcpp/registry/subos/default/lib"
+        }
+      ],
+      "format": "elf",
+      "link_library": "library_path",
+      "runtime": "runpath",
+      "transitive_needed": "rpath_link"
+    },
+    "symbol_provision": [
+      {
+        "dynamic_symbols": 153,
+        "exported": 31,
+        "path": "bin/argparse-tests/parse",
+        "status": "clean"
+      },
+      {
+        "dynamic_symbols": 6,
+        "exported": 0,
+        "path": "bin/build-mcpp-tests/answer",
+        "status": "clean"
+      },
+      {
+        "dynamic_symbols": 183,
+        "exported": 31,
+        "path": "bin/catch2-tests/main",
+        "status": "clean"
+      },
+      {
+        "dynamic_symbols": 20,
+        "exported": 0,
+        "path": "bin/cjson-tests/parse",
+        "status": "clean"
+      },
+      {
+        "dynamic_symbols": 177,
+        "exported": 31,
+        "path": "bin/cli11-tests/parse",
+        "status": "clean"
+      }
+    ],
+    "validation": {
+      "artifacts": [
+        {
+          "diagnostics": [],
+          "fingerprint": "6df92ea001c44dca",
+          "path": "/tmp/claude-1000/idx/target/x86_64-linux-gnu/71616b3d6c032208/bin/argparse-tests/parse",
+          "status": "pass"
+        },
+        {
+          "diagnostics": [],
+          "fingerprint": "c17d1e0dcf41d0dd",
+          "path": "/tmp/claude-1000/idx/target/x86_64-linux-gnu/71616b3d6c032208/bin/build-mcpp-tests/answer",
+          "status": "pass"
+        },
+        {
+          "diagnostics": [],
+          "fingerprint": "4f07836981a69b15",
+          "path": "/tmp/claude-1000/idx/target/x86_64-linux-gnu/71616b3d6c032208/bin/catch2-tests/main",
+          "status": "pass"
+        },
+        {
+          "diagnostics": [],
+          "fingerprint": "a72a3d8f36b7d136",
+          "path": "/tmp/claude-1000/idx/target/x86_64-linux-gnu/71616b3d6c032208/bin/cjson-tests/parse",
+          "status": "pass"
+        },
+        {
+          "diagnostics": [],
+          "fingerprint": "c140c033d5eff938",
+          "path": "/tmp/claude-1000/idx/target/x86_64-linux-gnu/71616b3d6c032208/bin/cli11-tests/parse",
+          "status": "pass"
+        }
+      ],
+      "contract_hash": "d69aa2690ce71fea",
+      "source": "post_link",
+      "status": "pass"
+    }
+  },
+  "schema_version": 2,
+  "toolchain": {
+    "abi": "libc++",
+    "spec": "clang 22.1.8 (x86_64-unknown-linux-gnu)",
+    "stdlib": "libc++",
+    "triple": "x86_64-unknown-linux-gnu"
+  }
+}

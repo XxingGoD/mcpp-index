@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "obj/build-mcpp-tests/src/generated.o"
+    }
+  ],
+  "version": 1
+}

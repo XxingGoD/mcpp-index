@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "obj/cli11-tests/tests/parse.o"
+    }
+  ],
+  "version": 1
+}

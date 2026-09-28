@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "obj/compat_catch2/Catch2-3.15.2/src/catch2/reporters/catch_reporter_teamcity.o"
+    }
+  ],
+  "version": 1
+}

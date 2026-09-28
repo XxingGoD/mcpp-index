@@ -1,0 +1,7 @@
+{
+  "index_repos": [
+    { "name": "compat", "url": "/tmp/claude-1000/idx/" }
+  ],
+  "lang": "en",
+  "mirror": "auto"
+}

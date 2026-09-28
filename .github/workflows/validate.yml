@@ -377,7 +377,16 @@ env:
   # as its floor, and tests/examples/mcpp-plugins builds against it. Engine
   # warnings the members may newly print: W1 to W3 of SPEC-008 (the library
   # interface), warnings only.
-  MCPP_VERSION: "2026.9.28.3"
+  #
+  # 2026.9.29.1 (mcpp-community/mcpp#738) builds a workspace as one graph per
+  # configuration: `mcpp test -p <member>` plans that member and what it
+  # reaches in the workspace's build directory, `target/<triple>/<key>/` at
+  # this repository's root, with the member's products in `bin/<name>/`. The
+  # members' own `tests/examples/*/target/` directories are no longer written.
+  # The directory name no longer hashes a package's own flags, so a member
+  # whose flags differ from another's shares the directory and ninja rebuilds
+  # the commands that changed.
+  MCPP_VERSION: "2026.9.29.1"
 
 jobs:
   lint:

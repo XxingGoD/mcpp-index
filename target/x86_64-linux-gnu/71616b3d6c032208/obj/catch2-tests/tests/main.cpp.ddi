@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "obj/catch2-tests/tests/main.o"
+    }
+  ],
+  "version": 1
+}

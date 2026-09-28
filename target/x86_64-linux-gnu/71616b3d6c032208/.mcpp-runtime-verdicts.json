@@ -1,0 +1,107 @@
+{
+  "artifacts": {
+    "bin/argparse-tests/parse": {
+      "diagnostics": [],
+      "fingerprint": "6df92ea001c44dca",
+      "status": "pass"
+    },
+    "bin/build-mcpp-tests/answer": {
+      "diagnostics": [],
+      "fingerprint": "c17d1e0dcf41d0dd",
+      "status": "pass"
+    },
+    "bin/catch2-tests/main": {
+      "diagnostics": [],
+      "fingerprint": "4f07836981a69b15",
+      "status": "pass"
+    },
+    "bin/cjson-tests/parse": {
+      "diagnostics": [],
+      "fingerprint": "a72a3d8f36b7d136",
+      "status": "pass"
+    },
+    "bin/cli11-tests/parse": {
+      "diagnostics": [],
+      "fingerprint": "c140c033d5eff938",
+      "status": "pass"
+    }
+  },
+  "contract_hash": "d69aa2690ce71fea",
+  "dlopen_surface": {
+    "findings": [],
+    "members": 0,
+    "reason": "no dependency published a runtime library directory; there is no dlopen surface to judge",
+    "walked": 0
+  },
+  "loader_tags": [
+    {
+      "actual": "DT_RPATH",
+      "form": "executable",
+      "path": "bin/argparse-tests/parse",
+      "required": "DT_RPATH",
+      "status": "ok"
+    },
+    {
+      "actual": "DT_RPATH",
+      "form": "executable",
+      "path": "bin/build-mcpp-tests/answer",
+      "required": "DT_RPATH",
+      "status": "ok"
+    },
+    {
+      "actual": "DT_RPATH",
+      "form": "executable",
+      "path": "bin/catch2-tests/main",
+      "required": "DT_RPATH",
+      "status": "ok"
+    },
+    {
+      "actual": "DT_RPATH",
+      "form": "executable",
+      "path": "bin/cjson-tests/parse",
+      "required": "DT_RPATH",
+      "status": "ok"
+    },
+    {
+      "actual": "DT_RPATH",
+      "form": "executable",
+      "path": "bin/cli11-tests/parse",
+      "required": "DT_RPATH",
+      "status": "ok"
+    }
+  ],
+  "post_link_key": "b3e3a6c24f34cb35",
+  "schema": 1,
+  "symbol_provision": [
+    {
+      "dynamic_symbols": 153,
+      "exported": 31,
+      "path": "bin/argparse-tests/parse",
+      "status": "clean"
+    },
+    {
+      "dynamic_symbols": 6,
+      "exported": 0,
+      "path": "bin/build-mcpp-tests/answer",
+      "status": "clean"
+    },
+    {
+      "dynamic_symbols": 183,
+      "exported": 31,
+      "path": "bin/catch2-tests/main",
+      "status": "clean"
+    },
+    {
+      "dynamic_symbols": 20,
+      "exported": 0,
+      "path": "bin/cjson-tests/parse",
+      "status": "clean"
+    },
+    {
+      "dynamic_symbols": 177,
+      "exported": 31,
+      "path": "bin/cli11-tests/parse",
+      "status": "clean"
+    }
+  ]
+}
