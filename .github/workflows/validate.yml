@@ -393,7 +393,11 @@ env:
   # module built, and a member's product directory holds every shared library
   # of its closure. 2026.9.29.1 is not used here: its sweep refused the 47
   # members that declare their own [indices].
-  MCPP_VERSION: "2026.9.29.2"
+  #
+  # 2026.9.29.3 (mcpp-community/mcpp#740): a program a member ships through
+  # `artifacts` waits for no plan-level runtime file, and its own runtime
+  # files are placed beside it in the member's product directory.
+  MCPP_VERSION: "2026.9.29.3"
 
 jobs:
   lint:
