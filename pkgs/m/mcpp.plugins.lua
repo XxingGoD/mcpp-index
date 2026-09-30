@@ -2,11 +2,19 @@
 -- each member selected by a feature.
 --
 --   [dependencies.mcpp]
---   plugins = { version = "0.17.0", features = ["rules-spirv"], host-module = true }
+--   plugins = { version = "0.18.0", features = ["rules-spirv"], host-module = true }
 --
 --   // build.mcpp
 --   import mcpp;
 --   import mcpp.rules.spirv;
+--
+-- 0.18.0 (same package floor): deps-cmake builds with Ninja under a Visual
+-- Studio instance as well (`generator = visual_studio` keeps the Visual Studio
+-- generator), keeps an installation outside the package under a key with no
+-- path of the machine and copies it into any later build with the same key
+-- (`options::cache`, `MCPP_DEPS_CMAKE_CACHE`, the user's cache directory), and
+-- reads the project's compiler and generator choice by the variable's name.
+-- mcpp-community/mcpp-plugins#39.
 --
 -- 0.17.0 (package floor 2026.9.28.3, `[package] mcpp`): the general library
 -- for build programs behind `plugins-core` (renamed from `surface`, kept as an
@@ -619,6 +627,13 @@ package = {
 
     xpm = {
         linux = {
+            ["0.18.0"] = {
+                url = {
+                    GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.18.0.tar.gz",
+                    CN     = "https://gitcode.com/mcpp-res/mcpp-plugins/releases/download/0.18.0/mcpp-plugins-0.18.0.tar.gz",
+                },
+                sha256 = "1e24d64d26504c52392898c8f124f84743f6b6da788d6dfac71bb876d1ddd370",
+            },
             ["0.17.0"] = {
                 url = {
                     GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.17.0.tar.gz",
@@ -864,9 +879,16 @@ package = {
                 },
                 sha256 = "adf1f9d6691a5d05a8a4a94e83c733ea39caee1510ce2c9af4cb23bebabea9f5",
             },
-            ["latest"] = { ref = "0.17.0" },
+            ["latest"] = { ref = "0.18.0" },
         },
         macosx = {
+            ["0.18.0"] = {
+                url = {
+                    GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.18.0.tar.gz",
+                    CN     = "https://gitcode.com/mcpp-res/mcpp-plugins/releases/download/0.18.0/mcpp-plugins-0.18.0.tar.gz",
+                },
+                sha256 = "1e24d64d26504c52392898c8f124f84743f6b6da788d6dfac71bb876d1ddd370",
+            },
             ["0.17.0"] = {
                 url = {
                     GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.17.0.tar.gz",
@@ -1112,9 +1134,16 @@ package = {
                 },
                 sha256 = "adf1f9d6691a5d05a8a4a94e83c733ea39caee1510ce2c9af4cb23bebabea9f5",
             },
-            ["latest"] = { ref = "0.17.0" },
+            ["latest"] = { ref = "0.18.0" },
         },
         windows = {
+            ["0.18.0"] = {
+                url = {
+                    GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.18.0.tar.gz",
+                    CN     = "https://gitcode.com/mcpp-res/mcpp-plugins/releases/download/0.18.0/mcpp-plugins-0.18.0.tar.gz",
+                },
+                sha256 = "1e24d64d26504c52392898c8f124f84743f6b6da788d6dfac71bb876d1ddd370",
+            },
             ["0.17.0"] = {
                 url = {
                     GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.17.0.tar.gz",
@@ -1360,7 +1389,7 @@ package = {
                 },
                 sha256 = "adf1f9d6691a5d05a8a4a94e83c733ea39caee1510ce2c9af4cb23bebabea9f5",
             },
-            ["latest"] = { ref = "0.17.0" },
+            ["latest"] = { ref = "0.18.0" },
         },
     },
 
