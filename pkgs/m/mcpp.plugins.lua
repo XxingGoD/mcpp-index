@@ -2,11 +2,18 @@
 -- each member selected by a feature.
 --
 --   [dependencies.mcpp]
---   plugins = { version = "0.18.0", features = ["rules-spirv"], host-module = true }
+--   plugins = { version = "0.18.1", features = ["rules-spirv"], host-module = true }
 --
 --   // build.mcpp
 --   import mcpp;
 --   import mcpp.rules.spirv;
+--
+-- 0.18.1 (same package floor): rules-qt and deps leave out another build
+-- system's output directory when they walk a source tree -- one holding
+-- CMakeCache.txt, .qmake.stash, a signed CACHEDIR.TAG or a <name>.tlog
+-- directory (MSBuild) -- so moc, lupdate and deps-cmake's inputs and key take
+-- no file another build system generated in the checkout.
+-- mcpp-community/mcpp-plugins#40.
 --
 -- 0.18.0 (same package floor): deps-cmake builds with Ninja under a Visual
 -- Studio instance as well (`generator = visual_studio` keeps the Visual Studio
@@ -627,6 +634,13 @@ package = {
 
     xpm = {
         linux = {
+            ["0.18.1"] = {
+                url = {
+                    GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.18.1.tar.gz",
+                    CN     = "https://gitcode.com/mcpp-res/mcpp-plugins/releases/download/0.18.1/mcpp-plugins-0.18.1.tar.gz",
+                },
+                sha256 = "f532c84ff6d69a331c51e13c7cf5680f4661cfec05e028beca8797270b9efc34",
+            },
             ["0.18.0"] = {
                 url = {
                     GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.18.0.tar.gz",
@@ -879,9 +893,16 @@ package = {
                 },
                 sha256 = "adf1f9d6691a5d05a8a4a94e83c733ea39caee1510ce2c9af4cb23bebabea9f5",
             },
-            ["latest"] = { ref = "0.18.0" },
+            ["latest"] = { ref = "0.18.1" },
         },
         macosx = {
+            ["0.18.1"] = {
+                url = {
+                    GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.18.1.tar.gz",
+                    CN     = "https://gitcode.com/mcpp-res/mcpp-plugins/releases/download/0.18.1/mcpp-plugins-0.18.1.tar.gz",
+                },
+                sha256 = "f532c84ff6d69a331c51e13c7cf5680f4661cfec05e028beca8797270b9efc34",
+            },
             ["0.18.0"] = {
                 url = {
                     GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.18.0.tar.gz",
@@ -1134,9 +1155,16 @@ package = {
                 },
                 sha256 = "adf1f9d6691a5d05a8a4a94e83c733ea39caee1510ce2c9af4cb23bebabea9f5",
             },
-            ["latest"] = { ref = "0.18.0" },
+            ["latest"] = { ref = "0.18.1" },
         },
         windows = {
+            ["0.18.1"] = {
+                url = {
+                    GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.18.1.tar.gz",
+                    CN     = "https://gitcode.com/mcpp-res/mcpp-plugins/releases/download/0.18.1/mcpp-plugins-0.18.1.tar.gz",
+                },
+                sha256 = "f532c84ff6d69a331c51e13c7cf5680f4661cfec05e028beca8797270b9efc34",
+            },
             ["0.18.0"] = {
                 url = {
                     GLOBAL = "https://github.com/mcpp-community/mcpp-plugins/archive/refs/tags/v0.18.0.tar.gz",
@@ -1389,7 +1417,7 @@ package = {
                 },
                 sha256 = "adf1f9d6691a5d05a8a4a94e83c733ea39caee1510ce2c9af4cb23bebabea9f5",
             },
-            ["latest"] = { ref = "0.18.0" },
+            ["latest"] = { ref = "0.18.1" },
         },
     },
 
