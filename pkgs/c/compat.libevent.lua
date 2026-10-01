@@ -103,6 +103,9 @@ function install()
     local command = quote(cmake) .. " -S " .. quote(srcroot)
         .. " -B " .. quote(path.join(prefix, "config"))
         .. " -DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+        -- Probe the native platform with its system compiler, not a toolchain
+        -- wrapper whose sysroot may differ from the generated headers' ABI.
+        .. (os.host() == "windows" and "" or " -DCMAKE_C_COMPILER=/usr/bin/cc")
         .. " -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_MBEDTLS=ON"
         .. " -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_SAMPLES=ON"
         .. " -DEVENT__DISABLE_BENCHMARK=ON -DEVENT__LIBRARY_TYPE=STATIC"
