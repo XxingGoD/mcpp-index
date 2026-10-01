@@ -158,7 +158,15 @@
 # descriptor grammar. A module name is resolved in the importing package's
 # closure, and no member provides a module name another member provides, so
 # every member's build directory is laid out as before.
+# ── 2026-10-01: latest_mcpp -> 2026.10.1.1, min_mcpp unchanged ─────────────
+#
+# Moved in the pull request that moves validate.yml's pin to 2026.10.1.1,
+# which runs every member on every platform with it. The release changes no
+# descriptor grammar. Narration moves to standard error, and every check here
+# that reads mcpp's output captures both streams (`tests/run_members.sh`).
+# A host module of an index package is compiled once per key and kept in the
+# global cache, which every member with a build program now exercises.
 [index]
 spec        = "1"
 min_mcpp    = "2026.9.18.3"
-latest_mcpp = "2026.9.30.2"
+latest_mcpp = "2026.10.1.1"
