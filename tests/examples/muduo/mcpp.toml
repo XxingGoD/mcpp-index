@@ -3,5 +3,5 @@
 name = "muduo-tests"
 version = "0.1.0"
 
-[dependencies.compat]
+[target.'cfg(linux)'.dependencies.compat]
 muduo = "2.0.3"

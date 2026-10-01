@@ -1,4 +1,4 @@
-#if defined(__linux__) || defined(__APPLE__)
+#ifdef __linux__
 #include <muduo/net/Buffer.h>
 
 #include <cstring>
