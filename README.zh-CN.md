@@ -41,6 +41,7 @@ mcpp self config --mirror CN   # 切换至国内镜像,默认使用 GLOBAL 上�
 | 仅 Linux 的 C++ 网络库 | [`compat.muduo`](pkgs/c/compat.muduo.lua) |
 | header-only | [`compat.gtl`](pkgs/c/compat.gtl.lua) |
 | 生成 config 头 | [`compat.c-ares`](pkgs/c/compat.c-ares.lua) |
+| 跨平台 C 事件循环库 | [`compat.libevent`](pkgs/c/compat.libevent.lua) |
 | C++23 module wrapper | [`nlohmann.json`](pkgs/n/nlohmann.json.lua) |
 | 上游自带 C++23 module | [`khronos.vulkan-hpp`](pkgs/k/khronos.vulkan-hpp.lua) |
 | 外部构建系统(`install()`) | [`compat.openssl`](pkgs/c/compat.openssl.lua) |

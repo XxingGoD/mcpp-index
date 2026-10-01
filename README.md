@@ -42,6 +42,7 @@ One descriptor per common shape:
 | Header-only | [`compat.gtl`](pkgs/c/compat.gtl.lua) |
 | Linux-only C++ network library | [`compat.muduo`](pkgs/c/compat.muduo.lua) |
 | Generated config header | [`compat.c-ares`](pkgs/c/compat.c-ares.lua) |
+| Cross-platform C event-loop library | [`compat.libevent`](pkgs/c/compat.libevent.lua) |
 | C++23 module wrapper | [`nlohmann.json`](pkgs/n/nlohmann.json.lua) |
 | C++23 module shipped by upstream | [`khronos.vulkan-hpp`](pkgs/k/khronos.vulkan-hpp.lua) |
 | External build system (`install()`) | [`compat.openssl`](pkgs/c/compat.openssl.lua) |
