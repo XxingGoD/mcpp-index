@@ -1,0 +1,7 @@
+# compat.boost-concept-check test project.
+[package]
+name = "boost-concept-check-tests"
+version = "0.1.0"
+
+[dependencies.compat]
+boost-concept-check = "1.92.0"

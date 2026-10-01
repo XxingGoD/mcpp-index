@@ -1,0 +1,7 @@
+# compat.boost-circular-buffer test project.
+[package]
+name = "boost-circular-buffer-tests"
+version = "0.1.0"
+
+[dependencies.compat]
+boost-circular-buffer = "1.92.0"

@@ -9,6 +9,12 @@
 
 ### Added
 
+- **`compat.muduo` 2.0.3 与 Boost 头组件。** muduo 仅支持 Linux;内联构建
+  `muduo_base`/`muduo_net` 源码,按上游 2.0.3 的依赖补充 `compat.boost-any`、
+  `compat.boost-circular-buffer`、`compat.boost-concept-check` 并复用既有 `compat.boost-utility`。
+  三个新增 Boost 包各有 workspace 成员;muduo 的成员按 Linux 门控。上游归档使用 GLOBAL 地址,
+  CN 镜像待补。安装钩子仅修补 C++20 移除的 `shared_ptr::unique()` 与缺失的 `<time.h>`。
+
 - **`compat.yaml-cpp` 0.8.0 与 0.9.0。** YAML 1.2 解析与生成,按上游 CMake 目标原样编译
   (`src/*.cpp` + `src/contrib/*.cpp`),GLOBAL + GitCode CN 镜像字节一致。上游把
   `YAML_CPP_STATIC_DEFINE` 作为静态构建的 PUBLIC 定义;描述符的 `defines` 到不了消费者,
