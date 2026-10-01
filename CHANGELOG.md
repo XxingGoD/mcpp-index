@@ -9,6 +9,11 @@
 
 ### Added
 
+- **`compat.muduo` 2.0.3 与 Boost 头组件。** muduo 的依赖闭包由 `compat.boost-any`、
+  `compat.boost-circular-buffer`、`compat.boost-concept-check` 和既有 `compat.boost-utility`
+  满足；新增三个 Boost compat 描述符及各自 workspace 行为/编译测试。归档 URL 使用 GLOBAL 上游源，
+  CN 镜像待补。Linux 上 `mcpp test -p muduo` 与三个 Boost 成员均通过。
+
 - **`compat.yaml-cpp` 0.8.0 与 0.9.0。** YAML 1.2 解析与生成,按上游 CMake 目标原样编译
   (`src/*.cpp` + `src/contrib/*.cpp`),GLOBAL + GitCode CN 镜像字节一致。上游把
   `YAML_CPP_STATIC_DEFINE` 作为静态构建的 PUBLIC 定义;描述符的 `defines` 到不了消费者,

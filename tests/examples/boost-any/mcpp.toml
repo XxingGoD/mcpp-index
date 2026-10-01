@@ -1,0 +1,7 @@
+# compat.boost-any test project.
+[package]
+name = "boost-any-tests"
+version = "0.1.0"
+
+[dependencies.compat]
+boost-any = "1.92.0"
