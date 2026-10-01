@@ -106,9 +106,19 @@ function install()
         .. " -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_MBEDTLS=ON"
         .. " -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_SAMPLES=ON"
         .. " -DEVENT__DISABLE_BENCHMARK=ON -DEVENT__LIBRARY_TYPE=STATIC"
+    local logfile = path.join(prefix, "mcpp_cmake_configure.log")
+    if os.host() == "windows" then
+        -- Windows xlings does not reliably execute a quoted .exe directly.
+        -- Drive it through cmd as compat.openssl does, and inspect its output.
+        local bat = path.join(prefix, "mcpp_configure.bat")
+        io.writefile(bat, "@echo off\r\n" .. command .. " > " .. quote(logfile)
+                     .. " 2>&1\r\nif errorlevel 1 exit /b 1\r\n")
+        command = "cmd /c " .. quote(bat)
+    end
     local ok, result = pcall(os.exec, command)
     if not ok or not result then
-        log.error("compat.libevent: upstream CMake configuration failed: %s", tostring(result))
+        log.error("compat.libevent: CMake configuration failed: %s; log: %s",
+                  tostring(result), os.isfile(logfile) and io.readfile(logfile) or "<not written>")
         return false
     end
     local generated = path.join(prefix, "config/include/event2/event-config.h")
